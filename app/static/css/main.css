@@ -1,0 +1,14 @@
+.display {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.employee {
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid grey;
+    margin-bottom: 10px
+}

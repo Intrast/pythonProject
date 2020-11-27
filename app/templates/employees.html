@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% from "_render_field.html" import render_field %}
+  <div style=" margin: 10px 0;">
+    <a href="{{url_for('create_employee')}}" style="font-size: 20px;">Create Employee</a>
+  </div>
+
+  {% for employee in employees %}
+    <div class="employee" style="margin-bottom: 15px; border-radius: 4px; padding: 5px; border: 1px solid grey;">
+        <div>{{ employee.name }}</div>
+        <div>{{ employee.surname }}</div>
+        <a href="{{ url_for('employee_details', id=employee.id)}}" class="btn btn-primary">Show</a>
+    </div>
+  {% endfor %}
+
+{% endblock %}
